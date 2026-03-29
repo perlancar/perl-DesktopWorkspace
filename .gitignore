@@ -1,0 +1,5 @@
+DesktopWorkspace-*
+.build
+*~
+nytprof*
+.DS_Store
