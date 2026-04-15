@@ -90,7 +90,7 @@ Bool. When opening one or more URL's, use a new window.
 
 =item * kde_activity
 
-Str. Switch to a KDE activity of the specified name.
+Str. Put the item in specified KDE activity.
 
 =back
 
@@ -113,7 +113,22 @@ Path to a file to be opened by an appropriate desktop application.
 Path to a directory to be opened by an appropriate desktop application (usually
 a file manager).
 
-=item * app_path
+=item * firefox_window_num
+
+Int. Group this item to a specific firefox window specified by an arbitrary
+number just for grouping. Note that only C<url> items should be have this.
+
+=item * dolphin_window_num
+
+Int. Group this item to a specific Dolphin window specified by an arbitrary
+number just for grouping. Note that only C<dir> and C<url> items should be have
+this.
+
+=item * prog_name
+
+Name of a program to be run, to be searched in PATH.
+
+=item * prog_path
 
 Path to a program to be run.
 
@@ -125,9 +140,14 @@ Str. When using Firefox to open the item, use this container.
 
 Bool. When opening the URL, use a new browser window.
 
+=item * new_file_manager_window
+
+Bool. When opening the directory, use a new file manager window.
+
 =back
 
-Exactly one of C<url>, C<file>, C<dir>, C<app_path> must be specified.
+Exactly one of C<url>, C<file>, C<dir>, C<prog_path>, C<prog_name> must be
+specified.
 
 
 =head1 NOTES
